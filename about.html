@@ -27,6 +27,24 @@
 
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        <style>
+          .video-container {
+              position: relative;
+              width: 100%; /* Se ajusta al ancho del contenedor padre */
+              padding-top: 56.25%; /* Relación de aspecto 16:9 */
+              height: 0;
+              overflow: hidden;
+          }
+  
+          .video-container iframe {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%; /* El iframe ocupa todo el ancho del contenedor */
+              height: 100%; /* El iframe ocupa todo el alto proporcional */
+              border: none; /* Sin bordes */
+          }
+      </style>
 
         
 
@@ -99,9 +117,22 @@
         </div>
         <!-- Page Header End -->
 
-<br>   <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">  
+<br> 
+
+<div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="video-container">
+    <iframe 
+        src="https://www.youtube.com/embed/L5rH9ZTKZmU?si=Ievlq1YzM3cNoAHT" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+    </iframe>
+</div>
+<br>
         <div class="row row-cols-1 row-cols-md-3 g-4">
-            <div class="col">
+         <div class="col">
               <div class="card h-100">
                 <img src="/img/1.jpg" class="card-img-top" alt="...">
               </div>
